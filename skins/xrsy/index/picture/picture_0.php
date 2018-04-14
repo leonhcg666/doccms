@@ -1,0 +1,1 @@
+<a href="<?php echo sys_href($data['channelId'],'picture',$data['id'])?>"><img style="height: 150px;min-height: 150px;" src="<?php echo $data['smallPic'];?>" border="0" /></a> 
