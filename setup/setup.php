@@ -24,8 +24,11 @@
 
 if (is_file(dirname(__FILE__).'/../config/wangleCMS.lock') && filesize(dirname(__FILE__).'/../config/wangleCMS.lock')==0)
     die('系统检测到已经安装，若要重新安装，请删除/config/wangleCMS.lock文件再进行操作。');
-if (!is_file('db-config-sample.php'))
+if (!is_file('db-config-sample.php')){
     die('对不起，我需要 db-config-sample.php 这个文件，可是你的目录中没有，你可以重新下载一个试试。');
+}else{
+	require_once 'db-config-sample.php';
+}
 if(!intval($_REQUEST['step']))
 {
 ?>
